@@ -1,84 +1,123 @@
-.app {
-  background-color: black;
-  width: 100vw;
-  height: 100vh;
+.planetCardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .planetCard {
-  border: 1px solid var(--border-color);
-  max-width: 70%;
-  margin: var(--spacing-20) 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--spacing-08);
-  gap: var(--spacing-08);
-}
-
-.planetCard:nth-child(odd) {
-  margin-inline-start: auto;
-}
-
-.planetCard > *:last-child {
-  margin-inline-start: auto;
-}
-
-.planetDescription {
-  padding-block-start: var(--spacing-04);
-  margin-block-end: auto;
-}
-
-.planetThumbnail {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin: 0 var(--spacing-16);
-}
-
-.wishlistItem {
-  border: 1px solid var(--border-color);
-  width: 150px;
+  background-color: #ffffff0a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-16);
-  margin: var(--spacing-20);
-  padding: var(--spacing-20);
+  transition: transform 0.3s ease;
+}
+
+.planetCard:hover {
+  transform: translateY(-5px);
+}
+
+.planetThumbnail {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+
+.planetDescription {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.roundButton {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #00bfff;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.roundButton:hover {
+  background-color: #007acc;
+}
+
+
+.wishlistList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.wishlistItem {
+  background-color: #ffffff0a;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .wishlistItemThumbnail {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  margin: 0 var(--spacing-16);
+  object-fit: cover;
 }
-.wishlistList {
-  display: flex;
-  margin: var(--spacing-16) 0;
-}
+
 
 .addWishlistItem {
-  border: 1px solid var(--border-color);
-  width: 200px;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #ffffff0a;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  align-items: stretch;
-  margin: var(--spacing-20);
-  padding: var(--spacing-20);
-}
-
-.addWishlistItem p {
-  margin-block-end: var(--spacing-20);
+  gap: 0.75rem;
 }
 
 .addWishlistItem label {
-  margin: 0;
-  font-size: small;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 0.5rem;
 }
 
-.addWishlistItem input, 
+.addWishlistItem input,
 .addWishlistItem select {
-  height: 30px;
-  margin-block-end: var(--spacing-20);
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #ffffff20;
+  color: white;
+}
+
+.addWishlistItem input::placeholder {
+  color: #ccc;
+}
+
+.addWishlistItem button {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #00bfff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addWishlistItem button:hover {
+  background-color: #007acc;
 }

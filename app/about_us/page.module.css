@@ -1,5 +1,96 @@
-.app {
-  background-color: black;
-  width: 100vw;
-  height: 100vh;
+.partnersSection {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.partnerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.partnerCard {
+  background-color: #ffffff10;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.partnerCard:hover {
+  transform: scale(1.03);
+}
+
+.partnerCard img {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+.valuesSection {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.valueCard {
+  background: #ffffff0a;
+  border-left: 4px solid #00ffffaa;
+  padding: 1rem;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+}
+
+
+.crewSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.crewCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  background-color: #ffffff08;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+.crewCard img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.crewCard h3 {
+  margin: 0;
+}
+
+.crewCard h5 {
+  margin: 0;
+  color: #ccc;
+  font-weight: normal;
+}
+
+.crewCard p {
+  margin-top: 0.5rem;
+}
+
+.crewCardContent {
+  display: flex;
+  flex-direction: column;
 }
